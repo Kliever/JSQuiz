@@ -56,8 +56,6 @@ const questionsResultLink = document.querySelector('.questions-block__results-li
 const resultQuestionsBtn = document.querySelector('.questions-block__answer-btn');
 const questionsNextBtn = document.querySelector('.questions-block__next-btn');
 const questionsReloadBtn = document.querySelector('.questions-block__reload-btn');
-//load
-const loadOnDevice = document.querySelector('.load-on-device');
 
 //admin-block
 const admin = body.classList.contains('_admin');
@@ -66,16 +64,6 @@ const questionNumber = document.querySelector('.start-block__number-of-question'
 // Глобальные переменные
 let listOfQuestionsNumbers; //вопросы в перемешанном виде
 let currentQuestion;//текущий вопрос от общего количества
-
-//установка
-let defaultInstallEvent = null;
-window.addEventListener('beforeinstallprompt', (event) => {
-  event.preventDefault();
-  defaultInstallEvent = event;
-})
-loadOnDevice.addEventListener('click', (event) => {
-  defaultInstallEvent.prompt();
-})
 let juniorJsQuizLoad = false;
 let HTMLQuizLoad = false;
 let CSSQuizLoad = false;
